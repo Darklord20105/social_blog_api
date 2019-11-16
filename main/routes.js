@@ -68,7 +68,7 @@ router.delete("/api/delete/post", (req, res, next) => {
             console.log(q_err)
         })
 })
-//not used yet
+//working 100%
 router.put('/api/put/likes', (req, res, next) => {
     const uid = [req.body.uid]
     const post_id = String(req.body.post_id)
@@ -115,7 +115,7 @@ router.put("/api/put/commenttodb", (req, res, next) => {
             console.log(q_err)
         })
 })
-//working
+//working 100%
 router.delete("/api/delete/comment", (req, res, next) => {
     const cid = String(req.body.cid)
     pool.query(`DELETE FROM comments WHERE cid = '${cid}';`,
@@ -177,6 +177,9 @@ router.get("/api/get/userposts", (req, res, next) => {
             console.log(q_err)
         })
 })
+
+
+
 //To check these 2 end points
 // Retrieve another users profile from db based on username 
 router.get('/api/get/otheruserprofilefromdb', (req, res, next) => {
